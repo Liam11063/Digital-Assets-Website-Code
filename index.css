@@ -1,3 +1,25 @@
+/* Background Colour */
 body {
-    background-color: #D9D9D9;
-  }
+  background-color: #d9d9d9;
+}
+
+/* H1 Heading Colour - Black */
+
+h1 {
+  color: #000000;
+}
+
+/* H2 Heading Colour - Darker Purple */
+h2 {
+  color: #c1005a;
+}
+
+/* H3 Heading Colour - Lighter Purple */
+h3 {
+  color: #e6006b;
+}
+
+/* H4 Heading Colour - Blue */
+h4 {
+  color: #01257a;
+}
