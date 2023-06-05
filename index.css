@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap");
+
 /* Background Colour */
 body {
   background-color: #d9d9d9;
@@ -22,4 +24,14 @@ h3 {
 /* H4 Heading Colour - Blue */
 h4 {
   color: #01257a;
+}
+/* Napoleon Image */
+.napoleonPNG {
+  width: 10%;
+  border-style: solid;
+  border-color: white;
+}
+
+.generateButtons {
+  font-family: "Crimson Pro", serif;
 }

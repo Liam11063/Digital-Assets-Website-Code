@@ -1,5 +1,12 @@
-const quotes = [];
 const random = [];
+const moods = [];
+const quotesHappy = [];
+const quotesAngry = [];
+const quotesContent = [];
+const quoteSad = [];
+const quoteInspiring = [];
+
+const quotes = [];
 
 quotes.push(
   "quote 1",
@@ -13,9 +20,10 @@ quotes.push(
   "quote 9",
   "quote 10"
 );
+
 random.push("1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
 
-const button = document.getElementById("generate");
+const button = document.getElementById("generateQuote");
 const msg = document.getElementById("message");
 const generatedQuote =
   quotes[Math.floor(Math.random() * Math.random(random) * quotes.length)];
