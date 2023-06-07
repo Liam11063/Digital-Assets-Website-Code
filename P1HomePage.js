@@ -37,8 +37,7 @@ const bookmarkMenu = document.getElementById("navigationButtons_Bookmarks");
 const discoverMenu = document.getElementById("navigationButtons_Discover");
 
 function homePage() {
-  window.location.href = "./P1HomePage.html";
-  homeMenu.disabled = true
+  window.location.href = "./index.html";
 }
 
 homeMenu.onclick = homePage;
