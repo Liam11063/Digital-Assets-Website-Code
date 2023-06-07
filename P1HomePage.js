@@ -1,3 +1,5 @@
+// Javascript code for index.html file (Home Page)
+
 const button = document.getElementById("pageLinkTwo");
 const navigationMenuDiv = document.getElementById("navigationMenuOptions");
 const navigationButton = document.getElementById("navigationMenu");

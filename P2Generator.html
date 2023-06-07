@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" href="index.css">
+
 <head>
     <title>Quote Generator</title>
 </head>
@@ -9,7 +10,17 @@
     <img class="napoleonPNG" src="./assets/Napoleon PNG.png" alt="Picture of Napoleon"></img>
     <button type="button" id="generateQuote">Generate Quote</button>
     <p id="message"></p>
-    <div class=""></div>
+
+    <div class="custom-select" style="width:200px;" id="selectmenu">
+        <select>
+            <option value="0">Select Mood!</option>
+            <option value="1">Happy</option>
+            <option value="2">Angry</option>
+            <option value="3">Sad</option>
+            <option value="4">Content</option>
+            <option value="5">Inspiring</option>
+        </select>
+    </div>
 </body>
 <script src="P2Generator.js"></script>
 
