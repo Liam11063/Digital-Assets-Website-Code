@@ -1,28 +1,77 @@
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap");
+/* Import Fonts from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap"); /* "Libre Baskerville", serif */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap"); /* "Josefin Sans", sans-serif */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"); /* "Montserrat", sans-serif */
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap"); /* "Crimson Pro", serif */
 
 /* Background Colour */
 body {
   background-color: #d9d9d9;
 }
 
-/* H1 Heading Colour - Black */
+/* Class P1 Paragraph Colour - Black */
 
-h1 {
+.p1 {
   color: #000000;
 }
 
-/* H2 Heading Colour - Darker Purple */
-h2 {
+/* Class P2 Paragraph Colour - Black */
+/* Set Nav. Bar Text to Invisible till Clicked */
+/* Setting Padding */
+.navigationSections {
+  background-color: #01257a;
+  visibility: hidden;
+  width: 250px;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+
+/* temp */
+.homepagegnerator {
+  margin-left: 800px;
+}
+
+p2 {
+  margin-left: 900px;
+}
+
+/* Setting Fonts */
+p, .navigationButtons {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Navigation Buttons */
+.navigationButtons {
+  background-color: #C2C1C1;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  display: block;
+}
+
+/* Hover Event for Navigation Button */
+.navigationButtons:hover {
+  background-color: white;
+  color: black;
+}
+
+/* H1 Heading Colour - Darker Purple */
+h1 {
   color: #c1005a;
 }
 
-/* H3 Heading Colour - Lighter Purple */
-h3 {
+/* H2 Heading Colour - Lighter Purple */
+h2 {
   color: #e6006b;
 }
 
-/* H4 Heading Colour - Blue */
-h4 {
+/* H3 Heading Colour - Blue */
+h3 {
   color: #01257a;
 }
 /* Napoleon Image */
@@ -34,4 +83,12 @@ h4 {
 
 .generateButtons {
   font-family: "Crimson Pro", serif;
+}
+
+/* Nagivation Menu - Home Page */
+.navigationMenu {
+  width: 35px;
+  height: 5px;
+  background-color: #01257a;
+  margin: 6px 0;
 }
