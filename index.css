@@ -44,14 +44,6 @@ p,
   font-family: "Montserrat", sans-serif;
 }
 
-/* Centering image featured on homepage*/
-.napoleonHomePagePNG {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
 /* Navigation Buttons */
 .navigationButtons {
   background-color: #c2c1c1;
@@ -100,7 +92,38 @@ h3 {
   margin: 6px 0;
 }
 
+/* Generate! Button (index.html and P2Generator.html Page) */
+.quoteGeneratorButton {
+  background-color: #c1005a;
+  border: none;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  display: block;
+  font-family: "Crimson Pro", serif;
+  border-radius: 10px;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+
+/* CSS for Page 1 - Home Page (index.html) */
+.napoleonHomePagePNG {
+  display: block;
+  padding-top: 200px;
+  padding-bottom: 400px;
+  padding-left: 150px;
+  width: 50%;
+}
+
+/* CSS for Page 2 - Generator */
 /* Following Code is for ./P2Generator.html and ./P2Generator.js to support to styling of the mood selector */
+
 .custom-select {
   position: relative;
   font-family: Arial;
@@ -156,4 +179,11 @@ h3 {
 .select-items div:hover,
 .same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.homepageGenerator {
+  color: #c1005a;
+  padding: 10px 20px;
+  border: white;
+  cursor: pointer;
 }
