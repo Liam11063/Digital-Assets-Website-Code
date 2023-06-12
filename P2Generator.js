@@ -293,9 +293,9 @@ function generateQuote() {
           )
         ];
     }
-    msg.textContent = image.src = "./assets/Napoleon PNG./png"
+    msg.textContent = image.src = "https://images.immediate.co.uk/production/volatile/sites/7/2019/08/GETTY-464442413-170e212.jpg?quality=90&webp=true&resize=1270,847"
   } else {
-    msg.textContent = image.src = "./assets/Napoleon PNG./png";
+    msg.textContent = image.src = "https://images.immediate.co.uk/production/volatile/sites/7/2019/08/GETTY-464442413-170e212.jpg?quality=90&webp=true&resize=1270,847";
   }
 }
 
