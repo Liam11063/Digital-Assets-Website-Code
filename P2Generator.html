@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html>
+<html lang="en-us">
 <link rel="stylesheet" href="index.css">
 
 <head>
     <title>Quote Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    </meta>
 </head>
 
 <body>
-    <img class="napoleonPNG" src="./assets/Napoleon PNG.png" alt="Picture of Napoleon"></img>
+    <button type="button" id="navigationMenu" class="navigationMenu">|||</button>
+    <div class="navigationSections" id="navigationMenuOptions">
+        <button type="button" id="navigationButtons_Home" class="navigationButtons">Home</button>
+        <button type="button" id="navigationButtons_Generator" class="navigationButtons">Generator ></button>
+        <button type="button" id="navigationButtons_Bookmarks" class="navigationButtons">Bookmarks</button>
+        <button type="button" id="navigationButtons_Discover" class="navigationButtons">Discover the
+            Authors</button>
+    </div>
+    <canvas class="pictureBorder" id="pictureBorder" width="800" height="500"></canvas>
+    <!-- <img class="napoleonPNG" src="./assets/Napoleon PNG.png" alt="Picture of Napoleon"></img> -->
+    <button type="button" id="bookmarkQuote" class="star"></button>
     <button type="button" id="generateQuote" class="quoteGeneratorButton">GENERATE!</button>
     <p id="message"></p>
 
