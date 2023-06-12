@@ -162,12 +162,7 @@ const quotesHappy = [
 
 // Angry Quotes
 const quotesAngry = [
-  "angryQuote1",
-  "angryQuote2",
-  "angryQuote3",
-  "angryQuote4",
-  "angryQuote5",
-  "angryQuote6",
+  { quote: "angryQuote1", image: "./assets/Napoleon PNG.png" },
 ];
 
 // Content Quotes
@@ -203,6 +198,7 @@ const quoteInspiring = [
 const random = [];
 random.push("1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
 
+const image = document.getElementById("generatorImage");
 const button = document.getElementById("generateQuote");
 const msg = document.getElementById("message");
 let generatedQuote = "";
@@ -297,9 +293,9 @@ function generateQuote() {
           )
         ];
     }
-    msg.textContent = generatedQuote;
+    msg.textContent = image.src = "./assets/Napoleon PNG./png"
   } else {
-    msg.textContent = generatedQuote;
+    msg.textContent = image.src = "./assets/Napoleon PNG./png";
   }
 }
 
