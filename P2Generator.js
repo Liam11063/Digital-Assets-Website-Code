@@ -293,9 +293,11 @@ function generateQuote() {
           )
         ];
     }
-    msg.textContent = image.src = "./assets/Napoleon PNG./png"
+    msg.textContent = generatedQuote;
+    image.src = "./assets/Napoleon PNG.png";
   } else {
-    msg.textContent = image.src = "./assets/Napoleon PNG./png";
+    msg.textContent = generatedQuote;
+    image.src = "./assets/Napoleon PNG.png";
   }
 }
 
