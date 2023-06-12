@@ -17,6 +17,26 @@ body {
   color: #000000;
 }
 
+.pictureBorder {
+  padding: 70px 0;
+}
+
+/* Nagivation Menu - Home Page */
+.navigationMenu {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-bottom: 10px;
+  letter-spacing: 2px;
+  background-color: #d9d9d9;
+  transform: rotate(90deg);
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+}
+
 /* Class P2 Paragraph Colour - Black */
 /* Set Nav. Bar Text to Invisible till Clicked */
 /* Setting Padding */
@@ -24,9 +44,6 @@ body {
   background-color: #01257a;
   visibility: hidden;
   width: 250px;
-  padding-top: 5px;
-  padding-right: 5px;
-  padding-bottom: 5px;
 }
 
 /* temp */
@@ -84,14 +101,6 @@ h3 {
   border-color: white;
 }
 
-/* Nagivation Menu - Home Page */
-.navigationMenu {
-  width: 35px;
-  height: 5px;
-  background-color: #01257a;
-  margin: 6px 0;
-}
-
 /* Generate! Button (index.html and P2Generator.html Page) */
 .quoteGeneratorButton {
   background-color: #c1005a;
@@ -123,6 +132,18 @@ h3 {
 
 /* CSS for Page 2 - Generator */
 /* Following Code is for ./P2Generator.html and ./P2Generator.js to support to styling of the mood selector */
+
+canvas {
+  display: block;
+}
+
+button.star {
+  width: 100px;
+  height: 100px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
 
 .custom-select {
   position: relative;
