@@ -162,7 +162,17 @@ const quotesHappy = [
 
 // Angry Quotes
 const quotesAngry = [
-  { quote: "angryQuote1", image: "./assets/Napoleon PNG.png" },
+  {
+    quote:
+      "We can easily forgive a child who is afraid of the dark; the real tragedy of life is when men are afraid of the light.",
+    image: "./assets/SocratesPNG.png",
+    author: "Socrates 469-399 BC",
+  },
+  {
+    quote: "Ignorance, the root and stem of all evil.",
+    image: "./assets/PlatoPNG.png",
+    author: "Plato 427 - 438 BC",
+  }
 ];
 
 // Content Quotes
@@ -200,7 +210,9 @@ random.push("1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
 
 const image = document.getElementById("generatorImage");
 const button = document.getElementById("generateQuote");
-const msg = document.getElementById("message");
+const msg = document.getElementById("generatorMessage");
+const author = document.getElementById("generatorAuthor");
+
 let generatedQuote = "";
 
 // Happy
@@ -293,11 +305,13 @@ function generateQuote() {
           )
         ];
     }
-    msg.textContent = generatedQuote;
-    image.src = "./assets/Napoleon PNG.png";
+    msg.textContent = `${generatedQuote.quote}`;
+    author.textContent = `${generatedQuote.author}`;
+    image.src = `${generatedQuote.image}`;
   } else {
-    msg.textContent = generatedQuote;
-    image.src = "./assets/Napoleon PNG.png";
+    msg.textContent = `${generatedQuote.quote}`;
+    author.textContent = `${generatedQuote.author}`;
+    image.src = `${generatedQuote.image}`;
   }
 }
 
