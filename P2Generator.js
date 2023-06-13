@@ -19,29 +19,12 @@ window.addEventListener("load", (event) => {
   }
 });
 
-//const canvas = document.getElementById('pictureBorder');
-//const ctx = canvas.getContext('2d');
-
-//const e = 2 * Math.PI / 6;
-//const r = 200;
-
-//function init() {
-// drawHexagon(r, r);
-//}
-
-//init();
-
-//function drawHexagon(x, y) {
-// ctx.beginPath();
-//for (var i = 0; i < 6; i++) {
-//  ctx.strokeStyle = "white";
-//  ctx.lineWidth = 5
-//   ctx.lineTo(x + r * Math.cos(e * i), y + r * Math.sin(e * i));
-//}
-// ctx.closePath();
-// ctx.stroke();
-// ctx.save()
-//}
+// Set a default quote, author and image when the page is loaded
+window.addEventListener("load", (event) => {
+  document.getElementById("generatorImage").src = "./assets/NapoleonPNG.png";
+  document.getElementById("generatorMessage").innerHTML = "Death is nothing, but to live defeated and inglorious is to die daily."
+  document.getElementById("generatorAuthor").innerHTML = "Napoleon 1769 - 1821 AD"
+});
 
 // Select Mood Code:
 // Created with the assistance of https://www.w3schools.com/howto/howto_custom_select.asp
@@ -169,10 +152,95 @@ const quotesAngry = [
     author: "Socrates 469-399 BC",
   },
   {
+    quote: "Envy is the ulcer of the soul.",
+    image: "./assets/SocratesPNG.png",
+    author: "Socrates 469-399 BC",
+  },
+  {
     quote: "Ignorance, the root and stem of all evil.",
     image: "./assets/PlatoPNG.png",
     author: "Plato 427 - 438 BC",
-  }
+  },
+  {
+    quote: "Honesty is for the most part less profitable than dishonesty.",
+    image: "./assets/PlatoPNG.png",
+    author: "Plato 427 - 438 BC",
+  },
+  {
+    quote: "Fear is pain arising from the anticipation of evil.",
+    image: "./assets/AristotlePNG.png",
+    author: "Aristotle 384-322 BC",
+  },
+  {
+    quote:
+      "Both oligarch and tyrant mistrust the people, and therefore deprive them of their arms.",
+    image: "./assets/AristotlePNG.png",
+    author: "Aristotle 384-322 BC",
+  },
+  {
+    quote:
+      "Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth",
+    image: "./assets/Marcus_AureliusPNG.png",
+    author: "Marcus Aurelius 121 - 180 AD",
+  },
+  {
+    quote: "Among those who dislike opression, are those that like to opress.",
+    image: "./assets/NapoleonPNG.png",
+    author: "Napoleon 1769 - 1821 AD",
+  },
+  {
+    quote: "In politics, stupidity is not a handicap.",
+    image: "./assets/NapoleonPNG.png",
+    author: "Napoleon 1769 - 1821 AD",
+  },
+  {
+    quote:
+      "An appeaser is one who feeds a crocodile, hoping it will eat him last.",
+    image: "./assets/Winston_ChurchillPNG.png",
+    author: "Winston Churchill 1874 - 1965 AD",
+  },
+  {
+    quote: "Three can keep a secret, if two of them are dead.",
+    image: "./assets/Franklin_RooseveltPNG.png",
+    author: "Franklin Roosevelt 1882 - 1945 AD",
+  },
+  {
+    quote: "Anger dwells only in the bosom of fools.",
+    image: "./assets/Albert_EinsteinPNG.png",
+    author: "Albert Einstein 1879 - 1955 AD",
+  },
+  {
+    quote: "The rich will do anything for the poor but get off their backs.",
+    image: "./assets/Karl_MarxPNG.png",
+    author: "Karl Marx 1818 - 1883 AD",
+  },
+  {
+    quote: "History repeats itself, first as tragedy, second as farce.",
+    image: "./assets/Karl_MarxPNG.png",
+    author: "Karl Marx 1818 - 1883 AD",
+  },
+  {
+    quote:
+      "I can calculate the motion of heavenly bodies but not the madness of people.",
+    image: "./assets/Isaac_NewtonPNG.png",
+    author: "Isaac Newton 1643 - 1727 AD",
+  },
+  {
+    quote: "We build too many walls and not enough bridges.",
+    image: "./assets/Isaac_NewtonPNG.png",
+    author: "Isaac Newton 1643 - 1727 AD",
+  },
+  {
+    quote: "Wretched are those who are vindictive and spiteful",
+    image: "./assets/Pope_FrancisPNG.png",
+    author: "Pope Francis 1936 - Current AD",
+  },
+  {
+    quote:
+      "I simply can't build up my hopes on a foundation consisting of confusion, misery, and death.",
+    image: "./assets/Anne_FrankPNG.png",
+    author: "Anne Frank 1929 - 1943 AD ",
+  },
 ];
 
 // Content Quotes
@@ -230,6 +298,7 @@ if (sessionStorage.getItem("selectedQuote") == 2) {
       Math.floor(Math.random() * Math.random(random) * quotesAngry.length)
     ];
 }
+
 // Sad
 if (sessionStorage.getItem("selectedQuote") == 3) {
   generatedQuote =
@@ -263,56 +332,47 @@ if (
 }
 
 function generateQuote() {
-  if (msg.textContent == generatedQuote) {
-    // Generate a new Quote if it matches the one generated before
-    // Happy
-    if (sessionStorage.getItem("selectedQuote") == 1) {
-      generatedQuote =
-        quotesHappy[
-          Math.floor(Math.random() * Math.random(random) * quotesHappy.length)
-        ];
-    }
-
-    // Angry
-    if (sessionStorage.getItem("selectedQuote") == 2) {
-      generatedQuote =
-        quotesAngry[
-          Math.floor(Math.random() * Math.random(random) * quotesAngry.length)
-        ];
-    }
-    // Sad
-    if (sessionStorage.getItem("selectedQuote") == 3) {
-      generatedQuote =
-        quoteSad[
-          Math.floor(Math.random() * Math.random(random) * quoteSad.length)
-        ];
-    }
-
-    // Content
-    if (sessionStorage.getItem("selectedQuote") == 4) {
-      generatedQuote =
-        quotesContent[
-          Math.floor(Math.random() * Math.random(random) * quotesContent.length)
-        ];
-    }
-
-    // Inspiring
-    if (sessionStorage.getItem("selectedQuote") == 5) {
-      generatedQuote =
-        quoteInspiring[
-          Math.floor(
-            Math.random() * Math.random(random) * quoteInspiring.length
-          )
-        ];
-    }
-    msg.textContent = `${generatedQuote.quote}`;
-    author.textContent = `${generatedQuote.author}`;
-    image.src = `${generatedQuote.image}`;
-  } else {
-    msg.textContent = `${generatedQuote.quote}`;
-    author.textContent = `${generatedQuote.author}`;
-    image.src = `${generatedQuote.image}`;
+  // Happy
+  if (sessionStorage.getItem("selectedQuote") == 1) {
+    generatedQuote =
+      quotesHappy[
+        Math.floor(Math.random() * Math.random(random) * quotesHappy.length)
+      ];
   }
+
+  // Angry
+  if (sessionStorage.getItem("selectedQuote") == 2) {
+    generatedQuote =
+      quotesAngry[
+        Math.floor(Math.random() * Math.random(random) * quotesAngry.length)
+      ];
+  }
+  // Sad
+  if (sessionStorage.getItem("selectedQuote") == 3) {
+    generatedQuote =
+      quoteSad[
+        Math.floor(Math.random() * Math.random(random) * quoteSad.length)
+      ];
+  }
+
+  // Content
+  if (sessionStorage.getItem("selectedQuote") == 4) {
+    generatedQuote =
+      quotesContent[
+        Math.floor(Math.random() * Math.random(random) * quotesContent.length)
+      ];
+  }
+
+  // Inspiring
+  if (sessionStorage.getItem("selectedQuote") == 5) {
+    generatedQuote =
+      quoteInspiring[
+        Math.floor(Math.random() * Math.random(random) * quoteInspiring.length)
+      ];
+  }
+  msg.textContent = `"${generatedQuote.quote}"`;
+  author.textContent = `${generatedQuote.author}`;
+  image.src = `${generatedQuote.image}`;
 }
 
 button.onclick = generateQuote;
@@ -338,13 +398,14 @@ ctx.lineTo(35, 57);
 ctx.lineTo(2, 35);
 ctx.lineTo(40, 35);
 ctx.closePath();
+ctx.fill()
 
 bookmark.addEventListener("click", function () {
   if (!count) {
     alert(
       "It seems the data for this function has been deleted... Please reload the page!"
     );
-  } else if (msg.textContent !== generatedQuote) {
+  } else if (!msg.textContent) {
     // Checks if a quote has been generated
     alert(
       'You have to generate a quote in order to save it... To generate a quote, select a mood and click the "GENERATE!" button\n\nPlease try again!'

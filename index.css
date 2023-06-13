@@ -132,6 +132,10 @@ h3 {
 
 /* CSS for Page 2 - Generator */
 /* Following Code is for ./P2Generator.html and ./P2Generator.js to support to styling of the mood selector */
+.generatorImage {
+  width: 500px;
+  height: 400px;
+}
 
 canvas {
   display: block;
