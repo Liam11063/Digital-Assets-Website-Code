@@ -1,29 +1,113 @@
-const button = document.getElementById("button");
-const text = document.getElementById("text");
+const text = document.getElementById('text');
 
-let keys = Object.keys(localStorage);
-let quotes = [];
-for (let i = 0; i < keys.length; i++) {
-  let value = localStorage.getItem(keys[i]);
-  if (typeof value === "string" && value.startsWith("Quote")) {
-    let newKey = keys[i].replace(/"/g, "").replace(/:/g, ""); // remove any double quotes or colons in the key
-    quotes.push(newKey);
+window.addEventListener('load', (event) => {
+  let keys = Object.keys(localStorage);
+  let quotes = [];
+
+  for (let i = 0; i < keys.length; i++) {
+    let value = localStorage.getItem(keys[i]);
+    if (typeof value === 'string' && value.startsWith('Quote')) {
+      let newKey = keys[i].replace(/"/g, '').replace(/:/g, '');
+      quotes.push(newKey);
+    }
+  }
+
+  if (quotes.length === 0) {
+    let quoteDiv = document.createElement('div');
+    quoteDiv.setAttribute('class', 'no-quotes-found');
+    quoteDiv.innerHTML = 'No quotes were found.';
+    text.appendChild(quoteDiv);
+  } else {
+    for (let i = 0; i < quotes.length; i++) {
+      let quoteText = localStorage.getItem(`"${quotes[i]}"`);
+      if (quoteText === null) {
+        quoteText = '';
+      }
+      let quoteDiv = document.createElement('div');
+      quoteDiv.setAttribute('data-quote-key', quotes[i]);
+      quoteDiv.style.lineHeight = "200%"
+      quoteDiv.innerHTML = quotes[i] + quoteText;
+
+      let bookmarkButton = document.createElement('button');
+      bookmarkButton.setAttribute('class', 'bookmark-button');
+      bookmarkButton.style.width = '100px';
+      bookmarkButton.style.height = '20px';
+      bookmarkButton.style.border = 'none';
+      bookmarkButton.style.background = '#c1005a';
+      bookmarkButton.style.fontFamily = "Josefin Sans"
+      bookmarkButton.style.color = 'white';
+      bookmarkButton.style.padding = "3px"
+      bookmarkButton.style.marginLeft = "5px"
+      bookmarkButton.innerHTML = 'Remove Quote...';
+      bookmarkButton.addEventListener('click', function () {
+        let keyToRemove = this.parentNode.getAttribute('data-quote-key');
+        localStorage.removeItem(keyToRemove);
+        this.parentNode.remove();
+        alert(`You have successfully removed the quote:\n\n"${keyToRemove}"\n\nTo generate another quote, visit our "Generator" page!`)
+      });
+      quoteDiv.appendChild(bookmarkButton);
+      text.appendChild(quoteDiv);
+    }
+  }
+});
+
+// Search Function Code
+let data = [
+  { name: "Apple", keywords: ["fruit", "red", "sweet"] },
+  { name: "Banana", keywords: ["fruit", "yellow", "sweet"] },
+  { name: "Carrot", keywords: ["vegetable", "orange", "crunchy"] },
+  { name: "Dragonfruit", keywords: ["fruit", "pink", "exotic"] },
+  { name: "Eggplant", keywords: ["vegetable", "purple", "spongy"] },
+  { name: "Fig", keywords: ["fruit", "purple", "seedy"] },
+  { name: "Grape", keywords: ["fruit", "purple", "juicy"] },
+  { name: "Hazelnut", keywords: ["nut", "brown", "crunchy"] },
+  {
+    name: "Iceberg Lettuce",
+    keywords: ["vegetable", "green", "crunchy"],
+  },
+  { name: "Jalapeno", keywords: ["vegetable", "green", "spicy"] },
+  { name: "Sam :)", keywords: ["sam"] },
+];
+
+let input = document.getElementById("bookmarkSearch");
+let list = document.getElementById("bookmarkSearchList");
+let message = document.getElementById("bookmarkSearchMessage");
+
+input.addEventListener("input", function () {
+  let value = input.value.toLowerCase().trim();
+  if (value === "") {
+    list.innerHTML = "";
+    message.innerText = "";
+    return;
+  }
+  let filteredData = data.filter((item) => {
+    return item.keywords.some((keyword) => {
+      return keyword.toLowerCase().includes(value);
+    });
+  });
+  renderList(filteredData);
+});
+
+function renderList(data) {
+  list.innerHTML = "";
+  data.forEach((item) => {
+    let li = document.createElement("li");
+    li.innerText = `${item.name}`;
+    list.appendChild(li);
+  });
+
+  if (data.length === 0) {
+    message.innerText = "No results found.";
+  } else {
+    message.innerText = "";
   }
 }
-
-button.addEventListener("click", function () {
-  let quotesDisplay = "";
-  for (let i = 0; i < quotes.length; i++) {
-    quotesDisplay += quotes[i] + "<br>";
-  }
-  text.innerHTML = quotesDisplay;
-})
 
 // Navigation Bar Code
 const navigationMenuDiv = document.getElementById("navigationMenuOptions");
 const navigationButton = document.getElementById("navigationMenu");
 
-if (!button || !navigationMenuDiv || !navigationButton)
+if (!navigationMenuDiv || !navigationButton)
   alert(
     "An error has occured while trying to operate this page. Please reload this site!"
   );

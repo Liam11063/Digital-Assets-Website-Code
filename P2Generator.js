@@ -22,8 +22,10 @@ window.addEventListener("load", (event) => {
 // Set a default quote, author and image when the page is loaded
 window.addEventListener("load", (event) => {
   document.getElementById("generatorImage").src = "./assets/NapoleonPNG.png";
-  document.getElementById("generatorMessage").innerHTML = "Death is nothing, but to live defeated and inglorious is to die daily."
-  document.getElementById("generatorAuthor").innerHTML = "Napoleon 1769 - 1821 AD"
+  document.getElementById("generatorMessage").innerHTML =
+    "Death is nothing, but to live defeated and inglorious is to die daily.";
+  document.getElementById("generatorAuthor").innerHTML =
+    "Napoleon 1769 - 1821 AD";
 });
 
 // Select Mood Code:
@@ -112,35 +114,159 @@ function closeAllSelect(elmnt) {
 
 // Happy Quotes
 const quotesHappy = [
-  "Be kind, for everyone you meet is fighting a hard battle.",
-  "Nothing in the affairs of men is worthy of great anxiety.",
-  "There is no harm in repeating a good thing.",
-  "Love is composed of a single soul inhabiting two bodies.",
-  "Whosoever is delighted in solitude is either a wild beast or a god.",
-  "Very little is needed to make a happy life; it is all within yourself, in your way of thinking.",
-  "Be content with what you have; rejoice in the way things are. When you realise there is nothing lacking, the whole world belongs to you.",
-  "Happiness lies in the joy of achievement and the thrill of creative effort.",
-  "I am easily satisfied with the very best.",
-  "When I look back on all these worries, I remember the story of the old man who said on his deathbed that he had had a lot of trouble in his life, most of which had never happened.",
-  "Happiness lies not in the mere possession of money; it lies in the joy of achievement, in the thrill of creative effort.",
-  "The only thing we have to fear is fear itself.",
-  "A table, a chair, a bowl of fruit, and a violin; what else does a man need to be happy?",
-  "If you want to live a happy life, tie it to a goal, not to people or things.",
-  "I do not know what I may appear to the world, but to myself I seem to have been only like a boy playing on the seashore, and diverting myself in now and then finding a smoother pebble or a prettier shell than ordinary, whilst the great ocean of truth lay all undiscovered before me.",
-  "A little bit of mercy makes the world less cold and more just.",
-  "We all have the duty to do good.",
-  "The root of this possibility of doing good - that we all have - is in creation.",
-  "I am among those who think that science has great beauty. A scientist in his laboratory is not only a technician: he is also a child placed before natural phenomena which impress him like a fairy tale.",
-  "The feeling of being alone and taking care of yourself without any aid does not depress but brings calm and great moral satisfaction.",
-  "We must accept finite disappointment but never lose infinite hope.",
-  "The time is always right to do what is right.",
-  "I have decided to stick with love. Hate is too great a burden to bear.",
-  "Think of all the beauty still left around you and be happy.",
-  "The best remedy for those who are afraid, lonely, or unhappy is to go outside, somewhere where they can be quite alone with the heavens, nature, and God.",
-  "I feel the suffering of millions. And yet, when I look up at the sky, I somehow feel that everything will change for the better.",
-  "Despite everything, I believe that people are really good at heart.",
-  "As long as this exists, this sunshine and this cloudless sky, and as long as I can enjoy it, how can I be sad?",
-  "I want to go on living even after my death! And therefore, I am grateful to God for giving me this gift.",
+  {
+    quote: "Be kind, for everyone you meet is fighting a hard battle.",
+    image: "./assets/SocratesPNG.png",
+    author: "Socrates 469-399 BC",
+  },
+  {
+    quote: "There is no harm in repeating a good thing.",
+    image: "./assets/PlatoPNG.png",
+    author: "Plato 427 - 438 BC",
+  },
+  {
+    quote:
+      "Whosoever is delighted in solitude is either a wild beast or a god.",
+    image: "./assets/PlatoPNG.png",
+    author: "Plato 427 - 438 BC",
+  },
+  {
+    quote:
+      "Very little is needed to make a happy life; it is all within yourself, in your way of thinking.",
+    image: "./assets/Marcus_AureliusPNG.png",
+    author: "Marcus Aurelius 121 - 180 AD",
+  },
+  {
+    quote:
+      "Be content with what you have; rejoice in the way things are. When you realise there is nothing lacking, the whole world belongs to you.",
+    image: "./assets/Marcus_AureliusPNG.png",
+    author: "Marcus Aurelius 121 - 180 AD",
+  },
+  {
+    quote:
+      "Happiness lies in the joy of achievement and the thrill of creative effort.",
+    image: "./assets/NapoleonPNG.png",
+    author: "Napoleon 1769 - 1821 AD",
+  },
+  {
+    quote: "I am easily satisfied with the very best.",
+    image: "./assets/Winston_ChurchillPNG.png",
+    author: "Winston Churchill 1874 - 1965 AD",
+  },
+  {
+    quote:
+      "When I look back on all these worries, I remember the story of the old man who said on his deathbed that he had had a lot of trouble in his life, most of which had never happened.",
+    image: "./assets/Winston_ChurchillPNG.png",
+    author: "Winston Churchill 1874 - 1965 AD",
+  },
+  {
+    quote:
+      "Happiness lies not in the mere possession of money; it lies in the joy of achievement, in the thrill of creative effort.",
+    image: "./assets/Franklin_RooseveltPNG.png",
+    author: "Franklin Roosevelt 1882 - 1945 AD",
+  },
+  {
+    quote: "The only thing we have to fear is fear itself.",
+    image: "./assets/Franklin_RooseveltPNG.png",
+    author: "Franklin Roosevelt 1882 - 1945 AD",
+  },
+  {
+    quote:
+      "A table, a chair, a bowl of fruit, and a violin; what else does a man need to be happy?",
+    image: "./assets/Albert_EinsteinPNG.png",
+    author: "Albert Einstein 1879 - 1955 AD",
+  },
+  {
+    quote:
+      "If you want to live a happy life, tie it to a goal, not to people or things.",
+    image: "./assets/Albert_EinsteinPNG.png",
+    author: "Albert Einstein 1879 - 1955 AD",
+  },
+  {
+    quote:
+      "I do not know what I may appear to the world, but to myself I seem to have been only like a boy playing on the seashore, and diverting myself in now and then finding a smoother pebble or a prettier shell than ordinary, whilst the great ocean of truth lay all undiscovered before me.",
+    image: "./assets/Isaac_NewtonPNG.png",
+    author: "Isaac Newton 1643 - 1727 AD ",
+  },
+  {
+    quote: "A little bit of mercy makes the world less cold and more just.",
+    image: "./assets/Pope_FrancisPNG.png",
+    author: "Pope Francis 1936 AD",
+  },
+  {
+    quote: "We all have the duty to do good.",
+    image: "./assets/Pope_FrancisPNG.png",
+    author: "Pope Francis 1936 AD",
+  },
+  {
+    quote:
+      "The root of this possibility of doing good - that we all have - is in creation.",
+    image: "./assets/Pope_FrancisPNG.png",
+    author: "Pope Francis 1936 AD",
+  },
+  {
+    quote:
+      "I am among those who think that science has great beauty. A scientist in his laboratory is not only a technician: he is also a child placed before natural phenomena which impress him like a fairy tale.",
+    image: "./assets/Marie_CuriePNG.png",
+    author: "Marie Curie 1867 - 1943 AD",
+  },
+  {
+    quote:
+      "The feeling of being alone and taking care of yourself without any aid does not depress but brings calm and great moral satisfaction.",
+    image: "./assets/Marie_CuriePNG.png",
+    author: "Marie Curie 1867 - 1943 AD",
+  },
+  {
+    quote: "We must accept finite disappointment but never lose infinite hope.",
+    image: "./assets/Martin_Luther_KingPNG.png",
+    author: "Martin Luther King 1929 - 1968 AD",
+  },
+  {
+    quote: "The time is always right to do what is right.",
+    image: "./assets/Martin_Luther_KingPNG.png",
+    author: "Martin Luther King 1929 - 1968 AD",
+  },
+  {
+    quote:
+      "I have decided to stick with love. Hate is too great a burden to bear.",
+    image: "./assets/Martin_Luther_KingPNG.png",
+    author: "Martin Luther King 1929 - 1968 AD",
+  },
+  {
+    quote: "Think of all the beauty still left around you and be happy.",
+    image: "./assets/Anne_FrankPNG.png",
+    author: "Anne Frank 1929 - 1943 AD",
+  },
+  {
+    quote:
+      "The best remedy for those who are afraid, lonely, or unhappy is to go outside, somewhere where they can be quite alone with the heavens, nature, and God.",
+    image: "./assets/Anne_FrankPNG.png",
+    author: "Anne Frank 1929 - 1943 AD",
+  },
+  {
+    quote:
+      "I feel the suffering of millions. And yet, when I look up at the sky, I somehow feel that everything will change for the better.",
+    image: "./assets/Anne_FrankPNG.png",
+    author: "Anne Frank 1929 - 1943 AD",
+  },
+  {
+    quote:
+      "Despite everything, I believe that people are really good at heart.",
+    image: "./assets/Anne_FrankPNG.png",
+    author: "Anne Frank 1929 - 1943 AD",
+  },
+  {
+    quote:
+      "As long as this exists, this sunshine and this cloudless sky, and as long as I can enjoy it, how can I be sad?",
+    image: "./assets/Anne_FrankPNG.png",
+    author: "Anne Frank 1929 - 1943 AD",
+  },
+  {
+    quote:
+      "I want to go on living even after my death! And therefore, I am grateful to God for giving me this gift.",
+    image: "./assets/Anne_FrankPNG.png",
+    author: "Anne Frank 1929 - 1943 AD",
+  },
 ];
 
 // Angry Quotes
@@ -280,7 +406,6 @@ const image = document.getElementById("generatorImage");
 const button = document.getElementById("generateQuote");
 const msg = document.getElementById("generatorMessage");
 const author = document.getElementById("generatorAuthor");
-
 let generatedQuote = "";
 
 // Happy
@@ -370,7 +495,8 @@ function generateQuote() {
         Math.floor(Math.random() * Math.random(random) * quoteInspiring.length)
       ];
   }
-  msg.textContent = `"${generatedQuote.quote}"`;
+
+  msg.textContent = `"${generatedQuote.quote.toString()}"`;
   author.textContent = `${generatedQuote.author}`;
   image.src = `${generatedQuote.image}`;
 }
@@ -385,7 +511,8 @@ canvas.height = bookmark.clientHeight;
 bookmark.appendChild(canvas);
 const ctx = canvas.getContext("2d");
 
-ctx.fillStyle = "yellow";
+ctx.strokeStyle = "#e6006b";
+ctx.lineWidth = 3;
 ctx.beginPath();
 ctx.moveTo(50, 0);
 ctx.lineTo(60, 35);
@@ -398,7 +525,7 @@ ctx.lineTo(35, 57);
 ctx.lineTo(2, 35);
 ctx.lineTo(40, 35);
 ctx.closePath();
-ctx.fill()
+ctx.stroke()
 
 bookmark.addEventListener("click", function () {
   if (!count) {
@@ -420,7 +547,7 @@ bookmark.addEventListener("click", function () {
   } else {
     count++;
     localStorage.setItem("bookmarkedQuoteCount", count); // Adding "1" to the bookmarkedQuoteCount value to ensure quotes don't get overwrote
-    localStorage.setItem(generatedQuote, "Quote" + count); // Save Quote if the function is fired, and increase the count by +1
+    localStorage.setItem(generatedQuote.quote, "Quote" + count); // Save Quote if the function is fired, and increase the count by +1
     alert(
       'You have successfully saved this quote!\n\nTo view your saved quotes, visit the "Bookmarks" page!'
     ); // Notify the user that the quote has been saved
