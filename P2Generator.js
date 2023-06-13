@@ -48,7 +48,7 @@ for (i = 0; i < l; i++) {
     c = document.createElement("DIV");
     c.innerHTML = selElmnt.options[j].innerHTML;
 
-    // Event listener for the "click" event
+    // Event listener for the onclick event
     c.addEventListener("click", function (e) {
       var y, i, k, s, h, sl, yl;
       s = this.parentNode.parentNode.getElementsByTagName("select")[0];
@@ -370,35 +370,309 @@ const quotesAngry = [
 ];
 
 // Content Quotes
+// THIS IS A COPY AND PASTE OF THE ANGRY QUOTES - ONLY FOR EXAMPLE, THE ANGRY AND HAPPY HAVE ACTUAL QUOTES
 const quotesContent = [
-  "The only true wisdom is in knowing you know nothing.",
-  "contentQuote2",
-  "contentQuote3",
-  "contentQuote4",
-  "contentQuote5",
-  "contentQuote6",
+  {
+    quote:
+      "We can easily forgive a child who is afraid of the dark; the real tragedy of life is when men are afraid of the light.",
+    image: "./assets/SocratesPNG.png",
+    author: "Socrates 469-399 BC",
+  },
+  {
+    quote: "Envy is the ulcer of the soul.",
+    image: "./assets/SocratesPNG.png",
+    author: "Socrates 469-399 BC",
+  },
+  {
+    quote: "Ignorance, the root and stem of all evil.",
+    image: "./assets/PlatoPNG.png",
+    author: "Plato 427 - 438 BC",
+  },
+  {
+    quote: "Honesty is for the most part less profitable than dishonesty.",
+    image: "./assets/PlatoPNG.png",
+    author: "Plato 427 - 438 BC",
+  },
+  {
+    quote: "Fear is pain arising from the anticipation of evil.",
+    image: "./assets/AristotlePNG.png",
+    author: "Aristotle 384-322 BC",
+  },
+  {
+    quote:
+      "Both oligarch and tyrant mistrust the people, and therefore deprive them of their arms.",
+    image: "./assets/AristotlePNG.png",
+    author: "Aristotle 384-322 BC",
+  },
+  {
+    quote:
+      "Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth",
+    image: "./assets/Marcus_AureliusPNG.png",
+    author: "Marcus Aurelius 121 - 180 AD",
+  },
+  {
+    quote: "Among those who dislike opression, are those that like to opress.",
+    image: "./assets/NapoleonPNG.png",
+    author: "Napoleon 1769 - 1821 AD",
+  },
+  {
+    quote: "In politics, stupidity is not a handicap.",
+    image: "./assets/NapoleonPNG.png",
+    author: "Napoleon 1769 - 1821 AD",
+  },
+  {
+    quote:
+      "An appeaser is one who feeds a crocodile, hoping it will eat him last.",
+    image: "./assets/Winston_ChurchillPNG.png",
+    author: "Winston Churchill 1874 - 1965 AD",
+  },
+  {
+    quote: "Three can keep a secret, if two of them are dead.",
+    image: "./assets/Franklin_RooseveltPNG.png",
+    author: "Franklin Roosevelt 1882 - 1945 AD",
+  },
+  {
+    quote: "Anger dwells only in the bosom of fools.",
+    image: "./assets/Albert_EinsteinPNG.png",
+    author: "Albert Einstein 1879 - 1955 AD",
+  },
+  {
+    quote: "The rich will do anything for the poor but get off their backs.",
+    image: "./assets/Karl_MarxPNG.png",
+    author: "Karl Marx 1818 - 1883 AD",
+  },
+  {
+    quote: "History repeats itself, first as tragedy, second as farce.",
+    image: "./assets/Karl_MarxPNG.png",
+    author: "Karl Marx 1818 - 1883 AD",
+  },
+  {
+    quote:
+      "I can calculate the motion of heavenly bodies but not the madness of people.",
+    image: "./assets/Isaac_NewtonPNG.png",
+    author: "Isaac Newton 1643 - 1727 AD",
+  },
+  {
+    quote: "We build too many walls and not enough bridges.",
+    image: "./assets/Isaac_NewtonPNG.png",
+    author: "Isaac Newton 1643 - 1727 AD",
+  },
+  {
+    quote: "Wretched are those who are vindictive and spiteful",
+    image: "./assets/Pope_FrancisPNG.png",
+    author: "Pope Francis 1936 - Current AD",
+  },
+  {
+    quote:
+      "I simply can't build up my hopes on a foundation consisting of confusion, misery, and death.",
+    image: "./assets/Anne_FrankPNG.png",
+    author: "Anne Frank 1929 - 1943 AD ",
+  },
 ];
 
 // Sad Quotes
+// THIS IS A COPY AND PASTE OF THE ANGRY QUOTES - ONLY FOR EXAMPLE, THE ANGRY AND HAPPY HAVE ACTUAL QUOTES
 const quoteSad = [
-  "sadQuote1",
-  "sadQuote2",
-  "sadQuote3",
-  "sadQuote4",
-  "sadQuote5",
-  "sadQuote6",
+  {
+    quote:
+      "We can easily forgive a child who is afraid of the dark; the real tragedy of life is when men are afraid of the light.",
+    image: "./assets/SocratesPNG.png",
+    author: "Socrates 469-399 BC",
+  },
+  {
+    quote: "Envy is the ulcer of the soul.",
+    image: "./assets/SocratesPNG.png",
+    author: "Socrates 469-399 BC",
+  },
+  {
+    quote: "Ignorance, the root and stem of all evil.",
+    image: "./assets/PlatoPNG.png",
+    author: "Plato 427 - 438 BC",
+  },
+  {
+    quote: "Honesty is for the most part less profitable than dishonesty.",
+    image: "./assets/PlatoPNG.png",
+    author: "Plato 427 - 438 BC",
+  },
+  {
+    quote: "Fear is pain arising from the anticipation of evil.",
+    image: "./assets/AristotlePNG.png",
+    author: "Aristotle 384-322 BC",
+  },
+  {
+    quote:
+      "Both oligarch and tyrant mistrust the people, and therefore deprive them of their arms.",
+    image: "./assets/AristotlePNG.png",
+    author: "Aristotle 384-322 BC",
+  },
+  {
+    quote:
+      "Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth",
+    image: "./assets/Marcus_AureliusPNG.png",
+    author: "Marcus Aurelius 121 - 180 AD",
+  },
+  {
+    quote: "Among those who dislike opression, are those that like to opress.",
+    image: "./assets/NapoleonPNG.png",
+    author: "Napoleon 1769 - 1821 AD",
+  },
+  {
+    quote: "In politics, stupidity is not a handicap.",
+    image: "./assets/NapoleonPNG.png",
+    author: "Napoleon 1769 - 1821 AD",
+  },
+  {
+    quote:
+      "An appeaser is one who feeds a crocodile, hoping it will eat him last.",
+    image: "./assets/Winston_ChurchillPNG.png",
+    author: "Winston Churchill 1874 - 1965 AD",
+  },
+  {
+    quote: "Three can keep a secret, if two of them are dead.",
+    image: "./assets/Franklin_RooseveltPNG.png",
+    author: "Franklin Roosevelt 1882 - 1945 AD",
+  },
+  {
+    quote: "Anger dwells only in the bosom of fools.",
+    image: "./assets/Albert_EinsteinPNG.png",
+    author: "Albert Einstein 1879 - 1955 AD",
+  },
+  {
+    quote: "The rich will do anything for the poor but get off their backs.",
+    image: "./assets/Karl_MarxPNG.png",
+    author: "Karl Marx 1818 - 1883 AD",
+  },
+  {
+    quote: "History repeats itself, first as tragedy, second as farce.",
+    image: "./assets/Karl_MarxPNG.png",
+    author: "Karl Marx 1818 - 1883 AD",
+  },
+  {
+    quote:
+      "I can calculate the motion of heavenly bodies but not the madness of people.",
+    image: "./assets/Isaac_NewtonPNG.png",
+    author: "Isaac Newton 1643 - 1727 AD",
+  },
+  {
+    quote: "We build too many walls and not enough bridges.",
+    image: "./assets/Isaac_NewtonPNG.png",
+    author: "Isaac Newton 1643 - 1727 AD",
+  },
+  {
+    quote: "Wretched are those who are vindictive and spiteful",
+    image: "./assets/Pope_FrancisPNG.png",
+    author: "Pope Francis 1936 - Current AD",
+  },
+  {
+    quote:
+      "I simply can't build up my hopes on a foundation consisting of confusion, misery, and death.",
+    image: "./assets/Anne_FrankPNG.png",
+    author: "Anne Frank 1929 - 1943 AD ",
+  },
 ];
 
 // Inspiring Quotes
+// THIS IS A COPY AND PASTE OF THE ANGRY QUOTES - ONLY FOR EXAMPLE, THE ANGRY AND HAPPY HAVE ACTUAL QUOTES
 const quoteInspiring = [
-  "inspiringQuote1",
-  "inspiringQuote2",
-  "inspiringQuote3",
-  "inspiringQuote4",
-  "inspiringQuote5",
-  "inspiringQuote6",
+  {
+    quote:
+      "We can easily forgive a child who is afraid of the dark; the real tragedy of life is when men are afraid of the light.",
+    image: "./assets/SocratesPNG.png",
+    author: "Socrates 469-399 BC",
+  },
+  {
+    quote: "Envy is the ulcer of the soul.",
+    image: "./assets/SocratesPNG.png",
+    author: "Socrates 469-399 BC",
+  },
+  {
+    quote: "Ignorance, the root and stem of all evil.",
+    image: "./assets/PlatoPNG.png",
+    author: "Plato 427 - 438 BC",
+  },
+  {
+    quote: "Honesty is for the most part less profitable than dishonesty.",
+    image: "./assets/PlatoPNG.png",
+    author: "Plato 427 - 438 BC",
+  },
+  {
+    quote: "Fear is pain arising from the anticipation of evil.",
+    image: "./assets/AristotlePNG.png",
+    author: "Aristotle 384-322 BC",
+  },
+  {
+    quote:
+      "Both oligarch and tyrant mistrust the people, and therefore deprive them of their arms.",
+    image: "./assets/AristotlePNG.png",
+    author: "Aristotle 384-322 BC",
+  },
+  {
+    quote:
+      "Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth",
+    image: "./assets/Marcus_AureliusPNG.png",
+    author: "Marcus Aurelius 121 - 180 AD",
+  },
+  {
+    quote: "Among those who dislike opression, are those that like to opress.",
+    image: "./assets/NapoleonPNG.png",
+    author: "Napoleon 1769 - 1821 AD",
+  },
+  {
+    quote: "In politics, stupidity is not a handicap.",
+    image: "./assets/NapoleonPNG.png",
+    author: "Napoleon 1769 - 1821 AD",
+  },
+  {
+    quote:
+      "An appeaser is one who feeds a crocodile, hoping it will eat him last.",
+    image: "./assets/Winston_ChurchillPNG.png",
+    author: "Winston Churchill 1874 - 1965 AD",
+  },
+  {
+    quote: "Three can keep a secret, if two of them are dead.",
+    image: "./assets/Franklin_RooseveltPNG.png",
+    author: "Franklin Roosevelt 1882 - 1945 AD",
+  },
+  {
+    quote: "Anger dwells only in the bosom of fools.",
+    image: "./assets/Albert_EinsteinPNG.png",
+    author: "Albert Einstein 1879 - 1955 AD",
+  },
+  {
+    quote: "The rich will do anything for the poor but get off their backs.",
+    image: "./assets/Karl_MarxPNG.png",
+    author: "Karl Marx 1818 - 1883 AD",
+  },
+  {
+    quote: "History repeats itself, first as tragedy, second as farce.",
+    image: "./assets/Karl_MarxPNG.png",
+    author: "Karl Marx 1818 - 1883 AD",
+  },
+  {
+    quote:
+      "I can calculate the motion of heavenly bodies but not the madness of people.",
+    image: "./assets/Isaac_NewtonPNG.png",
+    author: "Isaac Newton 1643 - 1727 AD",
+  },
+  {
+    quote: "We build too many walls and not enough bridges.",
+    image: "./assets/Isaac_NewtonPNG.png",
+    author: "Isaac Newton 1643 - 1727 AD",
+  },
+  {
+    quote: "Wretched are those who are vindictive and spiteful",
+    image: "./assets/Pope_FrancisPNG.png",
+    author: "Pope Francis 1936 - Current AD",
+  },
+  {
+    quote:
+      "I simply can't build up my hopes on a foundation consisting of confusion, misery, and death.",
+    image: "./assets/Anne_FrankPNG.png",
+    author: "Anne Frank 1929 - 1943 AD ",
+  },
 ];
 
+// Attempting to add to the randomisness of the quotes
 const random = [];
 random.push("1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
 
@@ -406,7 +680,7 @@ const image = document.getElementById("generatorImage");
 const button = document.getElementById("generateQuote");
 const msg = document.getElementById("generatorMessage");
 const author = document.getElementById("generatorAuthor");
-let generatedQuote = "";
+let generatedQuote = ""; // Start off with a empty string
 
 // Happy
 if (sessionStorage.getItem("selectedQuote") == 1) {
@@ -446,6 +720,7 @@ if (sessionStorage.getItem("selectedQuote") == 5) {
     ];
 }
 
+// Check for any error
 if (
   sessionStorage.getItem("selectedQuote") !== 1 ||
   sessionStorage.getItem("selectedQuote") !== 2 ||
@@ -504,6 +779,7 @@ function generateQuote() {
 button.onclick = generateQuote;
 
 // Bookmark Function Code:
+// Draw the Bookmark Icon (Star), using Canvas
 const bookmark = document.getElementById("bookmarkQuote");
 const canvas = document.createElement("canvas");
 canvas.width = bookmark.clientWidth;
@@ -558,11 +834,13 @@ bookmark.addEventListener("click", function () {
 const navigationMenuDiv = document.getElementById("navigationMenuOptions");
 const navigationButton = document.getElementById("navigationMenu");
 
-if (!button || !navigationMenuDiv || !navigationButton)
+// Check for missing elements in the code
+if (!navigationMenuDiv || !navigationButton)
   alert(
     "An error has occured while trying to operate this page. Please reload this site!"
   );
 
+  // Making the bar visible
 function navBar() {
   if (
     window.getComputedStyle(navigationMenuDiv).backgroundColor ==
@@ -581,11 +859,13 @@ function navBar() {
 
 navigationButton.onclick = navBar;
 
+// Button Elements in the Nav Bar
 const homeMenu = document.getElementById("navigationButtons_Home");
 const generatorMenu = document.getElementById("navigationButtons_Generator");
 const bookmarkMenu = document.getElementById("navigationButtons_Bookmarks");
 const discoverMenu = document.getElementById("navigationButtons_Discover");
 
+// Relocating the user based on the page selection
 function homePage() {
   window.location.href = "./index.html";
 }
@@ -611,4 +891,5 @@ function discoverPage() {
 discoverMenu.onclick = discoverPage;
 
 // This code was created with the assistance of W3Schools, MDN and the softwares: Github and Visual Studio Code
-// To view the public link of this site, go to: https://liam11063.github.io/Digital-Assets-Website-Code/index.html
+// To view the public link of this site, go to: https://liam11063.github.io/Digital-Assets-Website-Code/P2Generator.html, or https://liam11063.github.io/Digital-Assets-Website-Code/P3Bookmark.html
+

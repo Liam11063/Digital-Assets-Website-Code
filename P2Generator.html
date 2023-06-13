@@ -10,16 +10,26 @@
 </head>
 
 <body>
+    <!-- Navigation Bar Icon -->
     <button type="button" id="navigationMenu" class="navigationMenu">|||</button>
+
+    <!-- Navigation Bar Buttons - to link to other pages -->
     <div class="navigationSections" id="navigationMenuOptions">
         <button type="button" id="navigationButtons_Home" class="navigationButtons">Home</button>
         <button type="button" id="navigationButtons_Generator" class="navigationButtons">Generator</button>
         <button type="button" id="navigationButtons_Bookmarks" class="navigationButtons">Bookmarks</button>
         <button type="button" id="navigationButtons_Discover" class="navigationButtons">Discover the Authors</button>
     </div>
+    <!-- Quote Image, empty src string, as the image changes per quote -->
     <img id="generatorImage" class="generatorImage" src="">
+
+    <!-- Star Icon for Bookmark -->
     <button type="button" id="bookmarkQuote" class="star"></button>
+
+    <!-- Generate Quote Button -->
     <button type="button" id="generateQuote" class="quoteGeneratorButton">GENERATE!</button>
+
+    <!-- Quote Mood Selector -->
     <div class="custom-select" style="width:200px;" id="selectmenu">
         <select>
             <option value="0">Select Mood!</option>
@@ -30,9 +40,13 @@
             <option value="5">Inspiring</option>
         </select>
     </div>
+    <!-- Quote Message/Author -->
     <p id="generatorMessage" class="generatorMessage"></p>
     <p id="generatorAuthor" class="generatorAuthor"></p>
 </body>
 <script src="P2Generator.js"></script>
 
 </html>
+
+<!-- This code was created with the assistance of W3Schools, MDN and the softwares: Github and Visual Studio Code -->
+<!-- // To view the public link of this site, go to: https://liam11063.github.io/Digital-Assets-Website-Code/P2Generator.html, or https://liam11063.github.io/Digital-Assets-Website-Code/P3Bookmark.html -->
